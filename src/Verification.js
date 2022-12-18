@@ -10,17 +10,18 @@ function Verification() {
     const navigate = useNavigate();
 
     const [string, setString] = useState();
-    const [loading, setloading] = useState(true);
+    const [loading, setloading] = useState(false);
 
     useEffect(() => {
         async function fetchData() {
 
             try {
-                setloading(false)
+                setloading(true)
                 const data = await axios.get(`${config.api}/login/register/${params.id}`);
                 setString(data.data.random)
                 setloading(false)
             } catch (error) {
+                setloading(false)
                 console.log("Error in Getting User")
             }
         }
