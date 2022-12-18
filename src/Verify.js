@@ -20,8 +20,26 @@ function Verify() {
     }
 
   return (
-    <button className='btn btn-primary' onClick={verification}>Verify</button>
+    <div className='container' style={{marginTop:"150px"}}>
+                        <div className='row'>
+                            <div className='col-lg-4'>
+
+                            </div>
+                            <div className='col-lg-4'>
+                                <div class="card home-card">
+                                    <div class="card-body">
+                                        <h3 className='text-center' style={{color:"black"}}>Verification</h3>
+                                            <div class="textbox mt-4 text-center">
+                                                <button className='btn btn-info' onClick={verification}>Verify</button>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
   )
 }
+
+
 
 export default Verify
